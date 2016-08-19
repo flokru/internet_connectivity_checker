@@ -6,4 +6,4 @@ Pre-requisites: Python 2.7.
 
 Execute the script with `python internet_test.py`. It will run indefinitely unless you halt it (e.g., with Ctrl + C).
 
-The results can be found as CSV files. Each line represents the result of a test, with the status (connected or disconnected) followed by a timestamp (in local time). By default, the script attempts to connect to google.com every 30 seconds or so (timing is approximate) with a 2-second timeout, flushing the results to a file whenever 100z results are collected. If it cannot connect, we consider the state to be disconnected.
+The results can be found as CSV files. Each line represents the result of a test, with the status (connected or disconnected) followed by a timestamp (in local time). By default, the script attempts to connect to google.com every 30 seconds or so (timing is approximate) with a 2-second timeout, flushing the results to a file whenever 100 results are collected.
