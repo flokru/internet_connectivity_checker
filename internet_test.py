@@ -4,7 +4,7 @@ import urllib2
 import time
 from datetime import datetime
 
-TEST_URIS = ["http://www.googlesdfsdsdfasdfsdfsa.com", "http://www.google.com", "http://www.facebook.com", "http://www.amazon.com"]
+TEST_URIS = ["http://www.google.com", "http://www.facebook.com", "http://www.amazon.com"]
 TIMEOUT = 2
 MAX_BUFFER_LEN = 100
 WAIT_TIME = 30
@@ -14,7 +14,6 @@ results = []
 def ping_google_dns():
 	for uri in TEST_URIS:
 		try:
-			print "Testing ", uri
 			response = urllib2.urlopen(uri, timeout = TIMEOUT)
 			return True
 		except urllib2.URLError as err: pass
