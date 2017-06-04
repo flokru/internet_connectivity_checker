@@ -8,7 +8,7 @@ import sys
 TEST_URIS = ["http://www.google.com", "http://www.facebook.com", "http://www.amazon.com"]
 TIMEOUT = 2
 MAX_BUFFER_LEN = 100
-WAIT_TIME = 30
+WAIT_TIME = 15
 file_num = 1
 results = []
 
