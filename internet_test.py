@@ -3,6 +3,7 @@
 import urllib2
 import time
 from datetime import datetime
+import sys
 
 TEST_URIS = ["http://www.google.com", "http://www.facebook.com", "http://www.amazon.com"]
 TIMEOUT = 2
@@ -40,6 +41,7 @@ def check_internet():
 	
 	result_str = status + "," + timestamp
 	print result_str
+	sys.stdout.flush()
 	#results.append(result_str)
 
 	#if len(results) >= MAX_BUFFER_LEN:
