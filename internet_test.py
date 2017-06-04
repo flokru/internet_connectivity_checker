@@ -40,10 +40,10 @@ def check_internet():
 	
 	result_str = status + "," + timestamp
 	print result_str
-	results.append(result_str)
+	#results.append(result_str)
 
-	if len(results) >= MAX_BUFFER_LEN:
-		flush_results()
+	#if len(results) >= MAX_BUFFER_LEN:
+	#	flush_results()
 
 def loop():
 	check_internet()
