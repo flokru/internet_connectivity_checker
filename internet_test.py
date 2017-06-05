@@ -16,7 +16,7 @@ results = []
 def fetch_any_site():
 	for uri in TEST_URIS:
 		try:
-			print 'probing', uri, timeout
+			print 'probing', uri, TIMEOUT
 			response = urllib2.urlopen(uri, timeout = TIMEOUT)
 			return True
 		except (urllib2.URLError, timeout) as err: pass
