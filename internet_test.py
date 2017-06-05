@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import urllib2
+from socket import timeout
 import time
 from datetime import datetime
 import sys
@@ -12,12 +13,12 @@ WAIT_TIME = 15
 file_num = 1
 results = []
 
-def ping_google_dns():
+def fetch_any_site():
 	for uri in TEST_URIS:
 		try:
 			response = urllib2.urlopen(uri, timeout = TIMEOUT)
 			return True
-		except urllib2.URLError as err: pass
+		except (urllib2.URLError, timeout) as err: pass
 	return False
 
 def flush_results():
