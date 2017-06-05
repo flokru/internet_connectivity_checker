@@ -36,7 +36,7 @@ def flush_results():
 def check_internet():
 	global results
 
-	is_connected = ping_google_dns()
+	is_connected = fetch_any_site()
 	timestamp = str(datetime.now())
 	status = "connected" if is_connected else "disconnected"
 	
