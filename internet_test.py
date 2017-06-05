@@ -41,5 +41,6 @@ def loop():
 	time.sleep(WAIT_TIME)
 
 if __name__ == "__main__":
-	loop()
+	while True:
+		loop()
 		
