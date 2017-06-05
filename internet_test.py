@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-import urllib2
-from socket import timeout
+from urllib import request
+#from socket import timeout
 import time
 from datetime import datetime
 import sys
@@ -15,11 +15,11 @@ results = []
 
 def fetch_any_site():
 	for uri in TEST_URIS:
-		try:
+		#try:
 			print 'probing', uri, TIMEOUT
-			response = urllib2.urlopen(uri, timeout = TIMEOUT)
+			response = request.urlopen(uri, timeout = TIMEOUT)
 			return True
-		except (urllib2.URLError, timeout) as err: pass
+		#except (urllib2.URLError, timeout) as err: pass
 	return False
 
 def flush_results():
@@ -53,6 +53,6 @@ def loop():
 	check_internet()
 	time.sleep(WAIT_TIME)
 
-while True:
+if __name__ == "__main__":
 	loop()
 		
