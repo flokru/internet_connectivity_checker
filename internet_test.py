@@ -13,7 +13,7 @@ results = []
 
 def check_ping(hostname):
 	try:
-		output = subprocess.check_output(['ping', '-c 1', hostname], stderr=subprocess.PIPE, timeout=2)
+		output = subprocess.check_output(['ping', '-c 1', hostname], stderr=subprocess.PIPE, timeout=TIMEOUT)
 		return True
 	except Exception:
 		return False
